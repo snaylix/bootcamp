@@ -1,0 +1,15 @@
+Supervised Learning : we know y for some examples
+
+classification : y is a category
+regression     : y is a scalar (float)
+
+Unsupervised Learning : we don't know anything about y
+
+Hotel Reviews: classification
+Credit Fraud: classification (if pos & neg differ vastly in amount = class imbalance requires special attention)
+Energy Grid Management: classification/regression
+Sales Forecast: regression
+Book Recommender: Unsupervised
+Sports Marketing: Unsupervised (we don't know, yet what the correct outcome should be)
+Driving Assistant: classification (potentially dangerous, with false negatives and false positives)
+Home Assistant: Supervised NLP
