@@ -13,3 +13,6 @@ Book Recommender: Unsupervised
 Sports Marketing: Unsupervised (we don't know, yet what the correct outcome should be)
 Driving Assistant: classification (potentially dangerous, with false negatives and false positives)
 Home Assistant: Supervised NLP
+
+y has to be a vector (1-dim np array or in pandas: Series)
+X has to be a matrix (2-dim np array or in pandas: DataFrame)
