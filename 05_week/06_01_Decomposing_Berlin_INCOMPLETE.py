@@ -1,48 +1,42 @@
 # import packages
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import mean_absolute_error
-from statsmodels.api import OLS, add_constant
 from statsmodels.tsa.seasonal import seasonal_decompose
 
-# Define function that plots prediction
+
 def make_plot(y_train, y_test, columns):
     """
     This function plots predictions and compares them to the actual test data
-
     Parameters:
     y_train = df of training data
     y_test = df of test data
     columns = List of strings
     """
-
     y_train.resample('w').mean()['2010':'2019']['temp'].plot(label = 'Training Data')
     y_test.resample('w').mean()['temp'].plot(label='Test data')
-
     for column in columns:
         y_test.resample('w').mean()[column].plot(label=column)
-
     plt.title = 'Temperature prediction for Berlin Tempelhof'
     plt.xlabel = 'time'
     plt.ylabel = 'temperature'
     plt.legend()
 
 
-
 # Set standard plotting size
-plt.rcParams['figure.figsize'] = (16,9)
+plt.rcParams['figure.figsize'] = (16, 9)
 
 # Read in the data
-df = pd.read_csv('_RES/TG_STAID002759.txt', sep=',' , skiprows = 19)
+df = pd.read_csv('_RES/TG_STAID002759.txt', sep=',', skiprows=19)
 
 # Check column names
 df.columns
-df.rename(columns = {' SOUID':'souid', '    DATE':'date', '   TG':'temp', ' Q_TG':'quality'}, inplace=True)
+df.rename(columns={' SOUID': 'souid', '    DATE': 'date', '   TG': 'temp',
+    ' Q_TG': 'quality'}, inplace=True)
 
 # DateTime features
-df['DateTime'] = pd.to_datetime(df['date'].astype(str), format = '%Y%m%d')
+df['DateTime'] = pd.to_datetime(df['date'].astype(str), format='%Y%m%d')
 df['year'] = df['DateTime'].dt.year
 df['month'] = df['DateTime'].dt.month
 df['week'] = df['DateTime'].dt.week

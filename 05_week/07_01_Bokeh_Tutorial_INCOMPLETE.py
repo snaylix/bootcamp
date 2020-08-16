@@ -89,6 +89,7 @@ curdoc().add_root(column(p,widgetbox(slider)))
 hover = HoverTool(tooltips = [ ('Country','@country'), ('Temp. Anomaly', '@monthly_anomaly')])
 p.tools.append(hover)
 
+
 # - Any other cool widgets you can think of?
 
 
