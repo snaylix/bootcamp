@@ -1,3 +1,13 @@
-# SPICED Academy 'Data Science' bootcamp 2020 - Selected Works
+## SPICED Academy 'Data Science' Bootcamp 2020 - Selected Works
 
-Alright, let's see how this works.
+#### Gapminder
+Animated Scatterplot for Life Expectancy and fertility on the Gapminder dataset
+
+#### Titanic
+Decision Tree, Random Forest and Logistic Regression models to predict the survival rate of Titanic passengers on the Kaggle dataset
+
+#### Bikes
+
+#### Lyrics
+
+#### Population
