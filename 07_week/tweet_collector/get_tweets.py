@@ -52,7 +52,7 @@ if __name__ == '__main__':
     auth = authenticate()
     listener = TwitterListener()
     stream = Stream(auth, listener)
-    stream.filter(track=['cyberpunk'], languages=['en'])
+    stream.filter(track=['Merkel'], languages=['en'])
 
     text = t['text']
     if 'extended_tweet' in t:

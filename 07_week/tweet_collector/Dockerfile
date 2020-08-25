@@ -9,9 +9,10 @@ WORKDIR /app
 ADD requirements.txt /app
 
 ADD get_tweets.py /app
+ADD config.py /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Run app.py when the container launches
+# Run get_tweets.py when the container launches
 CMD ["python", "get_tweets.py"]
