@@ -18,5 +18,5 @@ Time Series forecasting and visualization on the development of the population o
 #### [Northwind](https://github.com/snaylix/bootcamp/tree/master/06_Northwind)
 Creation of a business Intelligence dashboard on data for fictional company 'Northwind' using PostgreSQL and Metabase
 
-#### [Cyberpunk Tweets](https://github.com/snaylix/bootcamp/tree/master/07_Cyberpunk)
-Sentiment analysis on tweets about Cyberpunk using Docker and MongoDB
+#### [Economy Tweets](https://github.com/snaylix/bootcamp/tree/master/07_Cyberpunk)
+Sentiment analysis on tweets about the economy using Docker and MongoDB
