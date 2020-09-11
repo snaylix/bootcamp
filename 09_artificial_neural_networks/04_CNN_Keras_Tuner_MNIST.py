@@ -24,7 +24,7 @@ class CNNHyperModel(HyperModel):
         model = keras.Sequential()
         model.add(
             Conv2D(
-                filters=32,
+                filters=256,
                 kernel_size=(3),
                 strides=(2, 2),
                 activation='relu',
@@ -34,14 +34,13 @@ class CNNHyperModel(HyperModel):
             Conv2D(
                 filters=hp.Choice(
                     'num_filters_1',
-                    values=[16, 32],
-                    default=16,
+                    values=[32, 64],
+                    default=32,
                 ),
                 activation='relu',
                 kernel_size=3
             )
         )
-        model.add(BatchNormalization())
         model.add(MaxPooling2D(pool_size=(3, 3), strides=(2, 2)))
         model.add(BatchNormalization())
         model.add(
@@ -55,9 +54,8 @@ class CNNHyperModel(HyperModel):
         )
         model.add(
             Conv2D(
-                filters=10,
-                kernel_size=(3),
-                strides=(2, 2),
+                filters=16,
+                kernel_size=3,
                 activation='relu',
             )
         )
@@ -74,7 +72,7 @@ class CNNHyperModel(HyperModel):
         model.add(BatchNormalization())
         model.add(Dense(self.num_classes, activation='softmax'))
 
-        model.compile(optimizer='rmsprop',
+        model.compile(optimizer='Adam',
                       loss='categorical_crossentropy',
                       metrics=['accuracy']
                       )

@@ -51,7 +51,7 @@ model = Sequential([
 
 model.summary()
 
-model.compile(optimizer='rmsprop',
+model.compile(optimizer='Adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
